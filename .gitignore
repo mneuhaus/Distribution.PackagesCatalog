@@ -7,3 +7,8 @@
 /flow
 /flow.bat
 composer.lock
+Configuration/PackageStates.php
+Configuration/Production/
+Configuration/README
+Configuration/Settings.yaml.example
+Configuration/Testing/
