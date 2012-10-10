@@ -11,11 +11,14 @@
 TYPO3:
   Flow:
     persistence:
-      backendOptions:
-        dbname: 'flow'       # adjust to your database name
-        user: ''             # adjust to your database user
-        password: ''         # adjust to your database password
 
-       # if you want to log executed SQL queries, enable the next 2 lines
-#      doctrine:
-#        sqlLogger: 'TYPO3\Flow\Persistence\Doctrine\Logging\SqlLogger'
+      # It is good practice to not specify user name and password of the database
+      # connection in this global Settings.yaml file. Rather specify them in the
+      # settings of the respective context (Production / Development ...).
+      backendOptions:
+        host: '127.0.0.1'    # adjust to your database host
+
+  # You might need to uncomment the following lines and specify
+  # the location of the PHP binary manually.
+    core:
+      phpBinaryPathAndFilename: '/usr/local/bin/php5-53LATEST-CLI'
