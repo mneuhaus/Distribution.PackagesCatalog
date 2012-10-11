@@ -1,4 +1,4 @@
-#!/usr/local/bin/php5-53LATEST-CLI
+#!/usr/bin/env php
 <?php
 
 /*                                                                        *
@@ -14,12 +14,7 @@
 /**
  * Bootstrap for the command line
  */
-$contexts = array(
-	"/kunden/350350_33330/flow/package-catalog" => "Production"
-);
-if (isset($contexts[$_SERVER["PWD"]])) {
-	putenv("FLOW_CONTEXT=" . $contexts[$_SERVER["PWD"]]);
-}
+
 require(__DIR__ . '/Packages/Framework/TYPO3.Flow/Scripts/flow.php');
 
 ?>

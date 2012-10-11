@@ -14,7 +14,8 @@
     },
     "require": {
         "typo3/flow": "dev-master",
-        "famelo/packagecatalog": "dev-master"
+        "famelo/packagecatalog": "dev-master",
+        "typo3/swiftmailer": "dev-master"
     },
     "require-dev": {
         "typo3/buildessentials": "dev-master",

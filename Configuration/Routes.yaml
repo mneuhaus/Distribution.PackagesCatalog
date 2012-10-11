@@ -18,7 +18,7 @@
   uriPattern: ''
   defaults:
     '@format': 'html'
-    '@package': 'TYPO3.PackageCatalog'
+    '@package': 'Famelo.PackageCatalog'
 
 ##
 # Flow subroutes
