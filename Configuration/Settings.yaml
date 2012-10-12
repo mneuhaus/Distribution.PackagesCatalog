@@ -1,0 +1,42 @@
+#                                                                        #
+# Example Settings                                                       #
+#                                                                        #
+# This file contains settings for various parts of the application.      #
+# Copy this file to Settings.yaml, and adjust as necessary.              #
+#                                                                        #
+# Please refer to the default settings file(s) or the manuals for        #
+# possible configuration options.                                        #
+#                                                                        #
+
+TYPO3:
+  Flow:
+    persistence:
+
+      # It is good practice to not specify user name and password of the database
+      # connection in this global Settings.yaml file. Rather specify them in the
+      # settings of the respective context (Production / Development ...).
+      backendOptions:
+        host: '127.0.0.1'    # adjust to your database host
+
+  # You might need to uncomment the following lines and specify
+  # the location of the PHP binary manually.
+  #  core:
+  #    phpBinaryPathAndFilename: 'C:/path/to/php.exe'
+
+Famelo:
+  PackageCatalog:
+    Receipients:
+      "apocalip@gmail.com": "Marc Neuhaus"
+      "robert@typo3.org": "Robert Lemke"
+      "julle@typo3.org": "Christian Jul Jensen"
+
+TYPO3:
+  SwiftMailer:
+    transport:
+      type: 'Swift_SmtpTransport'
+      options:
+        host: 'smtp.famelo.com'
+        port: '465'
+        username: 'server@famelo.com'
+        password: 'IkNlw74WLj'
+        encryption: 'ssl'

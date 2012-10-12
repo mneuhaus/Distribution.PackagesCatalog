@@ -5,10 +5,11 @@
 /Upgrading.txt
 /flow
 /flow.bat
-composer.lock
 Configuration/PackageStates.php
 Configuration/README
 Configuration/Settings.yaml.example
 Configuration/Testing/
+Configuration/Production/IncludeCachedConfigurations.php
 Web/.htaccess
 Web/_Resources/
+composer.phar

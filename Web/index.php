@@ -22,16 +22,9 @@ if ($rootPath === FALSE) {
 
 require($rootPath . 'Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Bootstrap.php');
 
-$context = "Development";
+require($rootPath . "Configuration/Environment.php");
 
-$hostContexts = array(
-	"package-catalog.flow.famelo.com" => "Production"
-);
-
-if (isset($hostContexts[$_SERVER["HTTP_HOST"]])){
-	$context = $hostContexts[$_SERVER["HTTP_HOST"]];
-}
-
+$context = getenv('FLOW_CONTEXT') ?: (getenv('REDIRECT_FLOW_CONTEXT') ?: 'Development');
 $bootstrap = new \TYPO3\Flow\Core\Bootstrap($context);
 $bootstrap->run();
 
